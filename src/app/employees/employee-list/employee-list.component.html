@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Employee</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <!-- <a 
+            href=""
+            class="list-group-item clearfix"
+            *ngFor="let employee of employees">
+            <div class="pull-left">
+                <h4>{{ employee.name}}</h4>
+                <p>{{ employee.description }}</p>
+            </div>
+            <span class="pull-right">
+                <img [src]="employee.imagePath" alt="{{ employee.name }}" class="img-responsive" style="max-height: 50px;">
+            </span>
+        </a> -->
+        <app-employee-record
+            *ngFor="let employeeEl of employees"
+            [employee]="employeeEl"
+            (employeeSelected)="onEmployeeSelected(employeeEl)"></app-employee-record>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Employee</button>
+    </div>
+</div> -->
+<!-- <hr>
+<div class="row">
+    <div class="col-xs-12">
+        <a href="" class="list-group-item clearfix">
+            <div class="pull-left">
+                <h4>Employee Name</h4>
+                <p>Empolyee Information</p>
+            </div>
+            <span class="pull-right">
+                <img src="" alt="" class="img-responsive">
+            </span>
+        </a> -->
+        <!-- <a 
+            href="#" 
+            class="list-group-item clearfix" 
+            *ngFor="let recipe of recipes">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+                <p class="list-group-item-text">{{recipe.description}}</p>
+            </div>
+            <span class="pull-right">
+                <img 
+                [src]="recipe.imagePath" 
+                alt="{{recipe.name}}" 
+                class="img-responsive" 
+                style="max-height: 50px;">
+            </span>
+        </a> -->
+        
+        <!--<app-recipe-item 
+        *ngFor="let recipeEl of recipes"
+        [recipe]="recipeEl"
+        (recipeSelected)="onRecipeSelected(recipeEl)"></app-recipe-item>-->
+
+        <!-- <app-recipe-item 
+        *ngFor="let recipeEl of recipes"
+        [recipe]="recipeEl"></app-recipe-item> -->
+        <!-- <app-employee-record></app-employee-record>
+    </div>
+</div> -->
+

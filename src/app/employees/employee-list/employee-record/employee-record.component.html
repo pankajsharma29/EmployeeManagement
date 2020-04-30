@@ -1,0 +1,12 @@
+<a 
+    href="#"
+    class="list-group-item clearfix"
+    (click)="onSelectedEmployee()">
+    <div class="pull-left">
+        <h4>{{ employee.name}}</h4>
+        <p>{{ employee.description }}</p>
+    </div>
+    <span class="pull-right">
+        <img [src]="employee.imagePath" alt="{{ employee.name }}" class="img-responsive" style="max-height: 50px;">
+    </span>
+</a>

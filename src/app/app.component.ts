@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'EmpolyeesManagement';
+  //title = 'EmpolyeesManagement';
+  loadedEmployeesList = 'employees';
+
+  onNavigate(selectedEmployeeList: string) {
+    this.loadedEmployeesList = selectedEmployeeList;
+  }
 }

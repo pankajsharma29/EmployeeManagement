@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-10">
+        <app-events-edit (eventsAdded)="onEventsAdded($event)"></app-events-edit>
+        <hr>
+        <ul class="list-group">
+            <a 
+                class="list-group-item" 
+                style="cursor: pointer;"
+                *ngFor="let event of events"
+            >
+            {{ event.name }} | {{ event.location }}
+            </a>
+        </ul>
+    </div>
+</div>
